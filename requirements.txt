@@ -1,0 +1,5 @@
+pyautogui
+g4f
+pygame
+pywhatkit
+speech_recognition

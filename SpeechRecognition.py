@@ -5,7 +5,7 @@ def detect_speech():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source)
-        print("Listening...")
+        print("\nListening...")
         audio = recognizer.listen(source)
 
     try:

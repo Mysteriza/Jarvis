@@ -1,7 +1,4 @@
 import g4f
-import re
-from SpeechRecognition import detect_speech
-from TextToSpeech import speak
 
 messages = [
     {
@@ -47,34 +44,3 @@ def GPT(*args):
 
     messages.append({"role": "assistant", "content": ms})
     return ms
-
-
-# def find_code(text):
-#     pattern = r"```python(.*?)```"
-#     matches = re.findall(pattern, text, re.DOTALL)
-#     if matches:
-#         code = matches[0].strip()
-#         return code
-#     else:
-#         print(" Tidak ada kode ditemukan.")
-
-
-# while True:
-#     query = detect_speech().lower()
-#     if query != "-":
-#         print("User: " + query)
-#         response = GPT(query)
-#         python_code = find_code(response)
-
-#         if python_code:
-#             response = (
-#                 response.replace(python_code, "")
-#                 .replace("python", "")
-#                 .replace("```", "")
-#             )
-#             speak(response)
-#             exec(python_code)
-#         else:
-#             speak(response)
-#     else:
-#         pass

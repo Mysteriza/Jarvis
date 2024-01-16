@@ -1,3 +1,4 @@
+# main_program.py
 from wit import Wit
 from TextToSpeech import speak
 from SpeechRecognition import detect_speech
@@ -25,7 +26,7 @@ def get_intent(query):
 def main():
     sleep_mode = False
 
-    speak("Halo tuan, apa yang bisa saya bantu?")
+    speak("Halo tuan!")
 
     while True:
         query = detect_speech().lower()
@@ -51,11 +52,15 @@ def main():
         elif "tutup tab" in query:
             pyautogui.hotkey("ctrl", "w")
             speak("siap")
+        elif "jeda" in query:
+             pyautogui.hotkey("space")
+        elif "lanjut" in query:
+             pyautogui.hotkey("space")
         elif "tutup aplikasi" in query:
             pyautogui.hotkey("alt", "f4")
             speak("beres tuan")
         elif intent == "sleep":
-            speak("sleeping")
+            speak("sleep")
             sleep_mode = True
         else:
             jawab = GPT(query)

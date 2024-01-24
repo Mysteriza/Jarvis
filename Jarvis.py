@@ -7,6 +7,7 @@ from YouTubePlayer import play_youtube
 from gpt4_free import GPT
 from datetime import datetime
 import pyautogui
+import subprocess
 
 WIT_AI_API_KEY = "7Q6HE2CSHLIGIEFT56YPOKMX6JL4Y7T7"
 client = Wit(WIT_AI_API_KEY)
@@ -53,12 +54,11 @@ def main():
             pyautogui.hotkey("ctrl", "w")
             speak("siap")
         elif "jeda" in query:
-             pyautogui.hotkey("space")
+            pyautogui.hotkey("space")
         elif "lanjut" in query:
-             pyautogui.hotkey("space")
+            pyautogui.hotkey("space")
         elif "tutup aplikasi" in query:
             pyautogui.hotkey("alt", "f4")
-            speak("beres tuan")
         elif intent == "sleep":
             speak("sleep")
             sleep_mode = True

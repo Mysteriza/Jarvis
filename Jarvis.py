@@ -7,7 +7,6 @@ from YouTubePlayer import play_youtube
 from gpt4_free import GPT
 from datetime import datetime
 import pyautogui
-import subprocess
 
 WIT_AI_API_KEY = "7Q6HE2CSHLIGIEFT56YPOKMX6JL4Y7T7"
 client = Wit(WIT_AI_API_KEY)
